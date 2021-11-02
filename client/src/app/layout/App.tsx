@@ -1,4 +1,4 @@
-import { CssBaseline, Typography } from "@material-ui/core";
+import { Container, CssBaseline, Typography } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import Catalog from "../../features/catalog/Catalog";
 import { Product } from "../models/product";
@@ -31,7 +31,9 @@ function App() {
     <>
       <CssBaseline />
       <Header />
-      <Catalog products={products} addProduct={addProduct} />
+      <Container>
+        <Catalog products={products} addProduct={addProduct} />
+      </Container>
     </>
   );
 }
